@@ -29,13 +29,77 @@ Numerológia
     - TODO
   - függvény a számjegyek összeadására (rekurzívan?)
   - betű-szám összerendelés:
-    - ciklussal összerakva
-    {
-      A: 1
-      B: 2
-      ...
-      Z: 8
-    }
-  - mátrix adatstruktúra:
+  - adatstruktúra:
+      bemenet:
+      {
+        vezeteknev: string,
+        keresztnev: string,
+        szuletesiIdo: {
+          ev: string,
+          honap: string,
+          nap: string
+        }
+      }
 
+      eredmeny:
+      {
+        evszam: number,
+        honapszam: number,
+        napszam: number,
+        altipus: number,
+        dominans: number,
+        latens: number,
+        matrix: [
+          [0]: null,
+          [1]: {
+            datumbolDarab: number,
+            osszevontDarab: number,
+            latensDarab: number,
+            piramisDarab: number
+          },
+          ...
+          [9]: {
+            ...
+          }
+        ],
+        piramis: [
+          {
+            szam: number,
+            kor: number,
+            ev: number
+          },
+          {
+            szam: number,
+            kor: number,
+            ev: number
+          },
+          {
+            szam: number,
+            kor: number,
+            ev: number
+          },
+          {
+            szam: number,
+            kor: number,
+            ev: number
+          }
+        ],
+        nyilak: {
+          eltokeltseg: boolean, // van 1-5-9
+          halogatas: boolean, // nincs 1-5-9
+          spiritualitas: boolean, // van 3-5-7
+          szkepticizmus: boolean, // nincs 3-5-7
+          intellektus: boolean, // van 3-6-9
+          rosszMemoria: boolean, // nincs 3-6-9
+          erzelmiKiegyensulyozottsag: boolean, // van 2-5-8
+          hipererzekenyseg: boolean, // nincs 2-5-8
+          gyakorlatiassag: boolean, // van 1-4-7
+          rendezetlenseg: boolean, // nincs 1-4-7
+          tervezes: boolean, // van 3-2-1
+          akarat: boolean, // van 6-5-4
+          csalodottsag: boolean, // nincs 4-5-6
+          aktivitas: boolean, // van 7-8-9
+          passzivitas: boolean, // nincs 7-8-9
+        }
+      }
 -->
